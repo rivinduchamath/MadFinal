@@ -161,9 +161,10 @@ public class DBHandler extends SQLiteOpenHelper {
             String itemId = cursor.getString(cursor.getColumnIndexOrThrow(FeedReaderContract.FeedEntryMessage.COLUMN_USER));
             String name = cursor.getString(cursor.getColumnIndexOrThrow(FeedReaderContract.FeedEntryMessage.COLUMN_SUBJECT));
             String msg = cursor.getString(cursor.getColumnIndexOrThrow(FeedReaderContract.FeedEntryMessage.COLUMN_MESSAGE));
+            String dd =  name+"\n"+msg;
 
-            MessageEtt message = new MessageEtt(itemId, name, msg);
-            itemIds.add(name);
+//            MessageEtt message = new MessageEtt(itemId, name, msg);
+            itemIds.add(dd);
         }
         cursor.close();
         return itemIds;
